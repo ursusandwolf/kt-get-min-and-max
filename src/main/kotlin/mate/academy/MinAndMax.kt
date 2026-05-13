@@ -1,6 +1,6 @@
 package mate.academy
 
-fun getMinAndMax(inputArray: IntArray)
+fun getMinAndMax(inputArray: IntArray) 
     = inputArray.takeIf { it.isNotEmpty() }
-    ?.let { intArrayOf(it.min(), it.max()) }
+    ?.let { intArrayOf(it.minOrNull() ?: 0, it.maxOrNull() ?: 0) }
     ?: intArrayOf()
